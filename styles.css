@@ -1,0 +1,69 @@
+:root { color-scheme: light; font-family: 'Segoe UI', system-ui, sans-serif; color: #252820; background: #f4f5ef; --accent: #c5e775; --line: #dfe2d5; }
+* { box-sizing: border-box; }
+body { margin: 0; }
+button, input, select, textarea { font: inherit; }
+button, select, input[type="range"], input[type="color"] { cursor: pointer; }
+button { color: inherit; }
+:focus-visible { outline: 3px solid #587526; outline-offset: 4px; }
+.topbar { min-height: 76px; background: #fcfdf9; border-bottom: 1px solid var(--line); padding: 16px 5%; display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.brand { display: flex; gap: 12px; align-items: center; color: inherit; text-decoration: none; font-weight: 700; font-size: 23px; letter-spacing: -1px; }
+.brand-mark { display: grid; place-items: center; width: 39px; height: 39px; background: #252820; color: var(--accent); border-radius: 10px; font-family: Georgia, serif; font-size: 24px; }
+.badge { font-size: 9px; letter-spacing: 1px; font-weight: 600; border: 1px solid #d9dbd1; border-radius: 5px; padding: 6px 8px; margin-left: 5px; }
+.top-note { font-size: 12px; color: #717568; }
+main { max-width: 1480px; margin: auto; padding: 0 5%; }
+.intro { display: flex; align-items: center; justify-content: space-between; padding: 44px 0 36px; gap: 20px; }
+.eyebrow { font-size: 10px; font-weight: 700; letter-spacing: 2px; margin: 0 0 13px; color: #6c745e; }
+h1 { font-size: clamp(32px, 4vw, 56px); letter-spacing: -2.5px; line-height: 1.12; margin: 0 0 14px; font-weight: 500; }
+h1 em { font-family: Georgia, serif; font-weight: 400; }
+.intro p:last-child { color: #6d7265; font-size: 13px; margin-bottom: 0; }
+.intro-symbol { font: 76px Georgia, serif; letter-spacing: -8px; transform: rotate(-8deg); padding: 5px 24px; background: var(--accent); border-radius: 20px; position: relative; margin-right: 15px; }
+.intro-symbol span { font: 27px system-ui; position: absolute; right: -15px; top: -12px; letter-spacing: 0; }
+.workspace { display: grid; grid-template-columns: 300px minmax(0, 1fr); border: 1px solid var(--line); border-radius: 16px; overflow: hidden; background: white; box-shadow: 0 12px 40px #303a2110, 0 2px 4px #303a2105; }
+.controls { padding: 24px; border-right: 1px solid var(--line); background: #fcfdf9; }
+.panel-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 24px; }
+h2 { font-size: 14px; margin: 0; }
+#reset { border: 1px solid var(--line); border-radius: 6px; background: white; font-size: 12px; color: #434c36; padding: 7px 10px; }
+label, legend { display: block; font-size: 12px; font-weight: 600; margin-bottom: 9px; }
+textarea, select { width: 100%; border: 1px solid #d5dacb; background: white; color: inherit; border-radius: 7px; padding: 11px; font-size: 13px; }
+textarea { resize: vertical; min-height: 85px; margin-bottom: 20px; line-height: 1.6; }
+select { margin-bottom: 21px; }
+.control-label { display: flex; justify-content: space-between; align-items: baseline; }
+output { font-size: 11px; color: #434f33; font-variant-numeric: tabular-nums; background: #edf1e4; border-radius: 4px; padding: 3px 7px; }
+input[type="range"] { display: block; width: 100%; margin: 0 0 16px; accent-color: #607d36; height: 24px; }
+fieldset { border: 0; padding: 0; margin: 0 0 23px; min-width: 0; }
+.alignment { display: flex; padding: 3px; border: 1px solid var(--line); background: #f5f6f0; border-radius: 6px; gap: 3px; }
+.alignment button { flex: 1; border: 0; border-radius: 4px; background: transparent; padding: 10px 2px; font-size: 12px; }
+.alignment button[aria-pressed="true"] { background: var(--accent); color: #27351a; box-shadow: 0 1px 4px #25282018; font-weight: 600; }
+.colors { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+input[type="color"] { width: 100%; height: 33px; padding: 3px; border: 1px solid var(--line); border-radius: 5px; background: white; }
+.canvas-panel { display: flex; flex-direction: column; min-width: 0; padding: 0 24px; background: #e9ece2; }
+.canvas-toolbar, .canvas-footer { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; padding: 21px 0; font-size: 10px; color: #545e49; letter-spacing: 1px; }
+.canvas-toolbar { border-bottom: 1px solid var(--line); }
+.canvas-toolbar i { display: inline-block; background: #84a949; width: 6px; height: 6px; border-radius: 50%; margin-right: 7px; }
+#font-caption { letter-spacing: 0; font-size: 12px; }
+#canvas { flex: 1; display: flex; align-items: center; background: #f5f3eb; padding: 60px 8%; min-height: 510px; border: 1px solid #25282015; border-radius: 4px; box-shadow: 0 5px 18px #2528200b; margin: 22px 0; }
+#preview { width: 100%; margin: 0; font-family: Georgia, serif; font-size: 72px; font-weight: 400; line-height: 1.15; letter-spacing: -2px; white-space: pre-wrap; overflow-wrap: anywhere; }
+.canvas-footer { border-top: 1px solid var(--line); }
+#character-count { letter-spacing: 0; }
+main > footer { display: flex; justify-content: space-between; gap: 20px; padding: 21px 0; font-size: 10px; color: #767c6b; }
+main > footer span:last-child { font-size: 9px; letter-spacing: 1px; }
+@media (max-width: 760px) { .top-note, .intro-symbol { display: none; } .topbar { min-height: 70px; } .intro { padding: 30px 0; } .workspace { grid-template-columns: 1fr; } .controls { border-right: 0; border-bottom: 1px solid var(--line); } #canvas { min-height: 340px; padding: 38px 7%; } .canvas-toolbar, .canvas-footer { padding: 16px; } h1 { letter-spacing: -1px; } }
+
+button:hover { background: #e7eddb; }
+textarea:hover, select:hover { border-color: #8b9a74; }
+.alignment button[aria-pressed="true"]:hover { background: #b8db66; }
+input[type="color"] { height: 40px; }
+@media (min-width: 761px) and (max-width: 1000px) {
+  main { padding: 0 3%; }
+  .workspace { grid-template-columns: 260px minmax(0, 1fr); }
+  .controls { padding: 20px; }
+  .canvas-panel { padding: 0 16px; }
+}
+@media (max-width: 760px) {
+  .canvas-panel { padding: 0 16px; }
+  .canvas-toolbar, .canvas-footer { padding: 16px 0; }
+  main > footer { flex-wrap: wrap; }
+}
+@media (forced-colors: active) {
+  .alignment button[aria-pressed="true"] { outline: 2px solid Highlight; }
+}
